@@ -1,0 +1,190 @@
+.ImageUploaderRoot {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.ImageUploaderRoot :global(.fileinput-label) {
+  display: inline-flex;
+  cursor: pointer;
+  padding: 10px 20px;
+  background-color: rgb(1, 50, 147);
+  color: #ddf3fa;
+  font-family: sans-serif;
+  border-radius: 6px;
+  transition: all 0.2s linear;
+}
+
+.ImageUploaderRoot :global(.fileinput-label:hover) {
+  background-color: rgb(4, 61, 175);
+  color: #ddf3fa;
+}
+
+.ImageUploaderRoot :global(.fileinput-label + input[type="file"]) {
+  display: none;
+}
+
+.cropModal {
+  position: absolute;
+  inset: 40px;
+  border: 1px solid rgb(204, 204, 204);
+  background: rgb(255, 255, 255);
+  overflow: auto;
+  border-radius: 4px;
+  outline: none;
+  padding: 0;
+}
+
+.cropModalOverlay {
+  position: fixed;
+  inset: 0px;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.cropModalBody {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cropModalBody :global(.header) {
+  padding: 10px 20px;
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  color: rgb(4, 61, 175);
+  border-bottom: 1px solid #ddd;
+}
+
+.cropModalBody :global(.header h3) {
+  margin: 0;
+  padding: 0;
+  font-size: 1.2rem;
+}
+
+.cropModalBody :global(.image-container) {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: auto;
+  overflow-x: hidden;
+  background-color: #1b1b1b;
+  padding: 20px;
+}
+
+.cropModalBody :global(.actions) {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.cropModalBody :global(.actions button.primary) {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  background-color: rgb(1, 50, 147);
+  color: #ddf3fa;
+  font-family: sans-serif;
+  border-radius: 4px;
+  transition: all 0.2s linear;
+}
+
+.cropModalBody :global(.actions button.secondary) {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  background-color: rgb(214, 228, 255);
+  color: rgb(1, 50, 147);
+  font-family: sans-serif;
+  border-radius: 4px;
+  transition: all 0.2s linear;
+}
+
+.cropModalBody :global(.crop-overlay) {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+}
+
+.cropModalBody :global(.actions .lhs) {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.cropModalBody :global(.actions .rhs) {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.cropModalBody :global(.actions .details) {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cropModalBody :global(.actions .details-row) {
+  display: flex;
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  gap: 10px;
+}
+
+.cropModalBody :global(.actions .detail-item) {
+  display: flex;
+}
+
+.cropModalBody :global(.actions .detail-item .key) {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  color: rgb(1, 50, 147);
+  font-weight: bold;
+  align-items: center;
+  line-height: 1;
+}
+
+.cropModalBody :global(.actions .detail-item .value) {
+  display: flex;
+  width: 60px;
+  height: 20px;
+  background-color: #ddd;
+  font-size: 0.75rem;
+  line-height: 1;
+  align-items: center;
+  justify-content: center;
+  padding: 1px;
+}
+
+.cropModalBody :global(.actions .zoomControls) {
+  display: flex;
+  gap: 4px;
+  margin-left: 15px;
+}
+
+.cropModalBody :global(.crop-img) {
+  width: 900px;
+  height: auto;
+  transform-origin: left top;
+  transition: all 0.1s ease-in-out;
+}
+
+.cropModalBody :global(.actions .zoomNavs) {
+  margin-left: 20px;
+}
+
+.cropModalBody :global(.zoom-container) {
+  overflow: auto;
+}
+
+.cropModalBody :global(.zoom-container::-webkit-scrollbar) {
+  width: 1px;
+  height: 1px;
+}
